@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-export (int) var gravity = 1200
-export (int) var move_speed = 400
-export (int) var jump_speed = 600
+export(int) var gravity = 1200
+export(int) var move_speed = 400
+export(int) var jump_speed = 600
 
 const UP = Vector2(0, -1)
 
