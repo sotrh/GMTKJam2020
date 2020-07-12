@@ -1,17 +1,38 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/icon.png" type="Texture" id=2]
 
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "debug",
+"speed": 5.0
+} ]
+
 [sub_resource type="CircleShape2D" id=1]
-radius = 14.9161
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+height = 12.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
+frames = SubResource( 4 )
+animation = "debug"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="BallShape" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="BoxShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="SpringShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
