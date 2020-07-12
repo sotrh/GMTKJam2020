@@ -40,7 +40,6 @@ func _physics_process(delta):
 	if current_orientation != desired_orientation:
 		var dr = desired_orientation - rotation_degrees
 		var rotation_direction = sign(dr)
-		print(dr)
 		if abs(dr) < 0.0001:
 			rotation_degrees = desired_orientation
 			current_orientation = desired_orientation
