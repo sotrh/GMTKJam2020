@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Komiku_-_03_-_Mushrooms.ogg-874b17562aeb94f3a9c79e5e9c65a55a.oggstr"
+
+[deps]
+
+source_file="res://Audio/Komiku_-_03_-_Mushrooms.ogg"
+dest_files=[ "res://.import/Komiku_-_03_-_Mushrooms.ogg-874b17562aeb94f3a9c79e5e9c65a55a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Images/Weight/LookRightWeight.png" type="Texture" id=7]
 [ext_resource path="res://Images/Weight/LookUpWeight.png" type="Texture" id=8]
 [ext_resource path="res://Images/Weight/LookLeftWeight.png" type="Texture" id=9]
+[ext_resource path="res://Audio/Komiku_-_03_-_Mushrooms.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -82,5 +83,10 @@ position = Vector2( -424, -64 )
 scale = Vector2( 0.403614, 0.403614 )
 frames = SubResource( 4 )
 animation = "weight"
-frame = 3
+frame = 1
 playing = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -9.095
+autoplay = true

@@ -131,5 +131,6 @@ shape = SubResource( 3 )
 stream = ExtResource( 57 )
 
 [node name="BoingSound" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2( 1.01157, 1 )
 stream = ExtResource( 58 )
 attenuation = 0.378929
