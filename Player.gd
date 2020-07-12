@@ -19,6 +19,7 @@ onready var ball_shape = $BallShape
 onready var box_shape = $BoxShape
 onready var spring_shape = $SpringShape
 onready var grunt = $GruntSound
+onready var boing = $BoingSound
 
 var velocity = Vector2.ZERO
 
@@ -35,9 +36,9 @@ func process_ball():
 		movement.y = -jump_speed
 	
 	print(movement.x)
-	if movement.x < 0.1:
+	if movement.x < 0:
 		animated_sprite.play("ball_roll_left")
-	elif movement.x > 0.1:
+	elif movement.x > 0:
 		animated_sprite.play("ball_roll_right")
 	else:
 		animated_sprite.play("idle")
@@ -76,6 +77,7 @@ func process_spring():
 	if jump_just_presssed:
 		if is_on_floor():
 			movement = facing.normalized() * jump_speed
+			boing.play()
 	return movement
 
 func _physics_process(delta):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/TennisBall/RightTennis Ball.png" type="Texture" id=2]
@@ -57,6 +57,7 @@
 [ext_resource path="res://Images/Weight/LookUpWeight.png" type="Texture" id=55]
 [ext_resource path="res://Images/Weight/LookLeftWeight.png" type="Texture" id=56]
 [ext_resource path="res://Sounds/grunt1.ogg" type="AudioStream" id=57]
+[ext_resource path="res://Sounds/boing.ogg" type="AudioStream" id=58]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -128,3 +129,7 @@ shape = SubResource( 3 )
 
 [node name="GruntSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 57 )
+
+[node name="BoingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 58 )
+attenuation = 0.378929
