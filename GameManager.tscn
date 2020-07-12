@@ -44,10 +44,10 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="Timer" type="Label" parent="."]
-margin_left = -488.0
-margin_top = -280.0
-margin_right = -256.0
-margin_bottom = -192.0
+margin_left = -464.0
+margin_top = -256.0
+margin_right = -232.0
+margin_bottom = -168.0
 custom_fonts/font = SubResource( 1 )
 text = "Changing in 10"
 max_lines_visible = 1
@@ -56,10 +56,10 @@ __meta__ = {
 }
 
 [node name="HintText" type="Label" parent="."]
-margin_left = -488.0
-margin_top = -224.0
-margin_right = -320.0
-margin_bottom = -48.0
+margin_left = -464.0
+margin_top = -200.0
+margin_right = -296.0
+margin_bottom = -24.0
 custom_fonts/font = SubResource( 2 )
 text = "Hint: this is debug text."
 autowrap = true
@@ -68,10 +68,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = -488.0
-margin_top = -8.0
-margin_right = -448.0
-margin_bottom = 6.0
+margin_left = -464.0
+margin_top = 16.0
+margin_right = -314.0
+margin_bottom = 35.0
 custom_fonts/font = SubResource( 3 )
 text = "Press ESCAPE to quit"
 __meta__ = {
@@ -79,7 +79,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -424, -64 )
+position = Vector2( -400, -40 )
 scale = Vector2( 0.403614, 0.403614 )
 frames = SubResource( 4 )
 animation = "weight"
