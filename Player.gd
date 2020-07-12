@@ -20,8 +20,11 @@ onready var box_shape = $BoxShape
 onready var spring_shape = $SpringShape
 onready var grunt = $GruntSound
 onready var boing = $BoingSound
+onready var anvil = $AnvilSound
+onready var ball_sound = $BallSound
 
 var velocity = Vector2.ZERO
+var frames_on_ground = 0
 
 func get_horizontal_axis():
 	return Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -33,6 +36,7 @@ func process_ball():
 	var movement = Vector2.ZERO
 	movement.x = get_horizontal_axis() * move_speed
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		ball_sound.play()
 		movement.y = -jump_speed
 	
 	if movement.x < 0:
@@ -45,6 +49,13 @@ func process_ball():
 	return movement
 	
 func process_cube():
+	if is_on_floor():
+		if frames_on_ground == 0:
+			anvil.play()
+		frames_on_ground += 1
+	else:
+		frames_on_ground = 0
+		
 	ball_shape.disabled = true
 	box_shape.disabled = false
 	spring_shape.disabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/TennisBall/RightTennis Ball.png" type="Texture" id=2]
@@ -58,6 +58,8 @@
 [ext_resource path="res://Images/Weight/LookLeftWeight.png" type="Texture" id=56]
 [ext_resource path="res://Sounds/grunt1.ogg" type="AudioStream" id=57]
 [ext_resource path="res://Sounds/boing.ogg" type="AudioStream" id=58]
+[ext_resource path="res://Sounds/274846__mrauralization__anvil.ogg" type="AudioStream" id=59]
+[ext_resource path="res://Sounds/Ball_Bounce-Popup_Pixels-172648817.wav" type="AudioStream" id=60]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -114,6 +116,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "not_the_weight!"
+frame = 1
 playing = true
 
 [node name="BallShape" type="CollisionShape2D" parent="."]
@@ -133,3 +136,10 @@ stream = ExtResource( 57 )
 scale = Vector2( 1.01157, 1 )
 stream = ExtResource( 58 )
 attenuation = 0.378929
+
+[node name="AnvilSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 59 )
+volume_db = -0.026
+
+[node name="BallSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 60 )

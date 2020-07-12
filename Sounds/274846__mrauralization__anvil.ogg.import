@@ -11,5 +11,5 @@ dest_files=[ "res://.import/274846__mrauralization__anvil.ogg-ada906d34d3dea1cb3
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
