@@ -18,6 +18,7 @@ onready var animated_sprite = $AnimatedSprite
 onready var ball_shape = $BallShape
 onready var box_shape = $BoxShape
 onready var spring_shape = $SpringShape
+onready var grunt = $GruntSound
 
 var velocity = Vector2.ZERO
 
@@ -33,6 +34,7 @@ func process_ball():
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		movement.y = -jump_speed
 	
+	print(movement.x)
 	if movement.x < 0.1:
 		animated_sprite.play("ball_roll_left")
 	elif movement.x > 0.1:
@@ -47,6 +49,10 @@ func process_cube():
 	box_shape.disabled = false
 	spring_shape.disabled = true
 	animated_sprite.play("not_the_weight!")
+	if Input.is_action_just_pressed("jump")\
+		or Input.is_action_just_pressed("ui_left")\
+		or Input.is_action_just_pressed("ui_right"):
+		grunt.play()
 	return Vector2.ZERO
 	
 func process_spring():
