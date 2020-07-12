@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Komiku_-_11_-_WIN.ogg-bc83cd05f45773a71a0a3190ab20f3eb.oggstr"
+
+[deps]
+
+source_file="res://Audio/Komiku_-_11_-_WIN.ogg"
+dest_files=[ "res://.import/Komiku_-_11_-_WIN.ogg-bc83cd05f45773a71a0a3190ab20f3eb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

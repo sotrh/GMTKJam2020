@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Win.gd" type="Script" id=2]
+[ext_resource path="res://Audio/Komiku_-_11_-_WIN.ogg" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -44,3 +45,7 @@ custom_fonts/font = SubResource( 2 )
 text = "Press ESCAPE to Quit"
 align = 1
 valign = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
