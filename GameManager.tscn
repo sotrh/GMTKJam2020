@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Images/TennisBall/RightTennis Ball.png" type="Texture" id=3]
+[ext_resource path="res://Images/TennisBall/DownTennis Ball.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -10,6 +12,17 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "ball",
+"speed": 1.0
+} ]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -37,3 +50,21 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = -488.0
+margin_top = -8.0
+margin_right = -448.0
+margin_bottom = 6.0
+custom_fonts/font = SubResource( 3 )
+text = "Press ESCAPE to quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -424, -64 )
+scale = Vector2( 0.403614, 0.403614 )
+frames = SubResource( 4 )
+animation = "ball"
+playing = true

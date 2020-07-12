@@ -16,6 +16,7 @@ onready var maze: Maze = $Maze
 onready var player: Player = $Player
 onready var label: Label = $Timer
 onready var hint: Label = $HintText
+onready var animation: AnimatedSprite = $AnimatedSprite
 
 var next_state = State.Ball
 var next_orientation = Orientation.DEG0
@@ -40,6 +41,11 @@ func calc_next_orientation():
 		
 func update_hint_text():
 	hint.text = HINTS[player.state]
+	
+func update_animation():
+	match player.state:
+		State.Ball:
+			animation.play("ball")
 			
 func _ready():
 	randomize()
@@ -50,6 +56,9 @@ func _ready():
 
 
 func _process(delta):
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit()
+	
 	time_since_last_change += delta
 	label.text = "Changing in %d" % int(time_between_changes - time_since_last_change + 1)
 	

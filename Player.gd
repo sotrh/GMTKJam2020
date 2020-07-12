@@ -14,6 +14,7 @@ export(State) var state
 
 const UP = Vector2(0, -1)
 
+onready var animated_sprite = $AnimatedSprite
 onready var ball_shape = $BallShape
 onready var box_shape = $BoxShape
 onready var spring_shape = $SpringShape
@@ -31,6 +32,14 @@ func process_ball():
 	movement.x = get_horizontal_axis() * move_speed
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		movement.y = -jump_speed
+	
+	if movement.x < 0:
+		animated_sprite.play("ball_roll_left")
+	elif movement.x > 0:
+		animated_sprite.play("ball_roll_right")
+	else:
+		animated_sprite.play("idle")
+	
 	return movement
 	
 func process_cube():
@@ -56,16 +65,22 @@ func process_spring():
 func _physics_process(delta):
 	rotation = 0
 	var movement = Vector2.ZERO
+	var is_ball = false
 	match state:
 		State.Ball:
 			movement = process_ball()
+			is_ball = true
 		State.Cube:
 			movement = process_cube()
 		State.Spring:
 			movement = process_spring()
 	
 	velocity.y += gravity * delta * (2 if velocity.y > 0 else 1)
-	velocity += movement
+	if is_ball:
+		velocity.x = movement.x
+		velocity.y += movement.y
+	else:
+		velocity += movement
 	velocity = move_and_slide(velocity, UP)
 	
 	if is_on_floor():

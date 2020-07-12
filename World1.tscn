@@ -14,10 +14,11 @@ tile_data = PoolIntArray( -458760, 0, 4, -458759, 0, 196609, -458758, 0, 196609,
 
 [node name="Goal" parent="GameManager/Maze" instance=ExtResource( 3 )]
 position = Vector2( -176, -192 )
-next_world = "res://World2.tscn"
+next_world = "res://World1.tscn"
 
 [node name="Player" parent="GameManager" instance=ExtResource( 1 )]
 position = Vector2( 16, 192 )
 
 [node name="Camera2D" type="Camera2D" parent="GameManager"]
 current = true
+zoom = Vector2( 0.75, 0.75 )

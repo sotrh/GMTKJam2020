@@ -18,6 +18,7 @@ next_world = "res://World.tscn"
 
 [node name="Player" parent="GameManager" instance=ExtResource( 1 )]
 position = Vector2( 16, 192 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="Camera2D" type="Camera2D" parent="GameManager"]
 current = true

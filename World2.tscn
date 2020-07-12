@@ -21,3 +21,4 @@ position = Vector2( 16, 192 )
 
 [node name="Camera2D" type="Camera2D" parent="GameManager"]
 current = true
+zoom = Vector2( 0.75, 0.75 )

@@ -19,6 +19,11 @@ config/name="GMTKJam2020"
 run/main_scene="res://World1.tscn"
 config/icon="res://Images/icon.png"
 
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
+
 [input]
 
 ui_left={
