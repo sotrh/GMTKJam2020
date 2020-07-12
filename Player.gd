@@ -41,7 +41,7 @@ func process_ball():
 	elif movement.x > 0:
 		animated_sprite.play("ball_roll_right")
 	else:
-		animated_sprite.play("idle")
+		animated_sprite.play("ball_idle")
 	
 	return movement
 	
