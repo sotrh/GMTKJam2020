@@ -82,5 +82,5 @@ position = Vector2( -424, -64 )
 scale = Vector2( 0.403614, 0.403614 )
 frames = SubResource( 4 )
 animation = "weight"
-frame = 2
+frame = 3
 playing = true

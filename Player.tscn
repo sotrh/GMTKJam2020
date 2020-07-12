@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/TennisBall/RightTennis Ball.png" type="Texture" id=2]
@@ -56,6 +56,8 @@
 [ext_resource path="res://Images/Weight/LookRightWeight.png" type="Texture" id=54]
 [ext_resource path="res://Images/Weight/LookUpWeight.png" type="Texture" id=55]
 [ext_resource path="res://Images/Weight/LookLeftWeight.png" type="Texture" id=56]
+[ext_resource path="res://Sounds/grunt1.ogg" type="AudioStream" id=57]
+[ext_resource path="res://Sounds/boing.ogg" type="AudioStream" id=58]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -99,7 +101,7 @@ animations = [ {
 radius = 16.0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+extents = Vector2( 18.9435, 13.5143 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 13.817
@@ -119,7 +121,15 @@ playing = true
 shape = SubResource( 1 )
 
 [node name="BoxShape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2.2981 )
 shape = SubResource( 2 )
 
 [node name="SpringShape" type="CollisionShape2D" parent="."]
 shape = SubResource( 3 )
+
+[node name="GruntSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 57 )
+
+[node name="BoingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 58 )
+attenuation = 0.378929
