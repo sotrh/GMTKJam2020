@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ball_Bounce-Popup_Pixels-172648817.wav-b0df99ae29b08829fcab18247db31bd3.sample"
+
+[deps]
+
+source_file="res://Sounds/Ball_Bounce-Popup_Pixels-172648817.wav"
+dest_files=[ "res://.import/Ball_Bounce-Popup_Pixels-172648817.wav-b0df99ae29b08829fcab18247db31bd3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
