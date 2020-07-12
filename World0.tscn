@@ -14,7 +14,7 @@ tile_data = PoolIntArray( -131080, 0, 4, -131079, 0, 196609, -131078, 0, 196609,
 
 [node name="Goal" parent="GameManager/Maze" instance=ExtResource( 3 )]
 position = Vector2( 112, -24 )
-next_world = "res://World2.tscn"
+next_world = "res://World1.tscn"
 
 [node name="Player" parent="GameManager" instance=ExtResource( 1 )]
 position = Vector2( -192, 40 )

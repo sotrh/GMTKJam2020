@@ -48,6 +48,8 @@ func update_animation():
 			animation.play("ball")
 		State.Spring:
 			animation.play("spring")
+		State.Cube:
+			animation.play("weight")
 			
 func _ready():
 	randomize()
@@ -55,6 +57,7 @@ func _ready():
 	player.state = next_state
 	calc_next_state()
 	update_hint_text()
+	update_animation()
 
 
 func _process(delta):
@@ -71,4 +74,5 @@ func _process(delta):
 		calc_next_state()
 		calc_next_orientation()
 		update_hint_text()
+		update_animation()
 		

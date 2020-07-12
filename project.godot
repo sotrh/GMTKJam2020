@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GMTKJam2020"
-run/main_scene="res://World1.tscn"
+run/main_scene="res://World0.tscn"
 config/icon="res://Images/icon.png"
 
 [display]

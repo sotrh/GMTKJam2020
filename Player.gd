@@ -33,9 +33,9 @@ func process_ball():
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		movement.y = -jump_speed
 	
-	if movement.x < 0:
+	if movement.x < 0.1:
 		animated_sprite.play("ball_roll_left")
-	elif movement.x > 0:
+	elif movement.x > 0.1:
 		animated_sprite.play("ball_roll_right")
 	else:
 		animated_sprite.play("idle")
@@ -46,6 +46,7 @@ func process_cube():
 	ball_shape.disabled = true
 	box_shape.disabled = false
 	spring_shape.disabled = true
+	animated_sprite.play("not_the_weight!")
 	return Vector2.ZERO
 	
 func process_spring():
