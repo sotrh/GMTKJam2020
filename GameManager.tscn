@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Images/TennisBall/RightTennis Ball.png" type="Texture" id=3]
 [ext_resource path="res://Images/TennisBall/DownTennis Ball.png" type="Texture" id=4]
+[ext_resource path="res://Images/Spring/IdleSpring.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -18,6 +19,11 @@ font_data = ExtResource( 2 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "spring",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "ball",
@@ -66,5 +72,5 @@ __meta__ = {
 position = Vector2( -424, -64 )
 scale = Vector2( 0.403614, 0.403614 )
 frames = SubResource( 4 )
-animation = "ball"
+animation = "spring"
 playing = true

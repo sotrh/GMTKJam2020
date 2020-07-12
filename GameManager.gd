@@ -46,6 +46,8 @@ func update_animation():
 	match player.state:
 		State.Ball:
 			animation.play("ball")
+		State.Spring:
+			animation.play("spring")
 			
 func _ready():
 	randomize()

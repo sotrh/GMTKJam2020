@@ -57,9 +57,18 @@ func process_spring():
 	var facing = mouse_pos - global_position
 	rotation = -atan(facing.x / facing.y)
 	
+	if mouse_pos.x < 0:
+		animated_sprite.play("spring_left")
+	elif mouse_pos.x > 0:
+		animated_sprite.play("spring_right")
+	else:
+		animated_sprite.play("spring_idle")
+		
+	
 	var movement = Vector2.ZERO
-	if jump_just_presssed and is_on_floor():
-		movement = facing.normalized() * jump_speed
+	if jump_just_presssed:
+		if is_on_floor():
+			movement = facing.normalized() * jump_speed
 	return movement
 
 func _physics_process(delta):
