@@ -35,7 +35,6 @@ func process_ball():
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		movement.y = -jump_speed
 	
-	print(movement.x)
 	if movement.x < 0:
 		animated_sprite.play("ball_roll_left")
 	elif movement.x > 0:

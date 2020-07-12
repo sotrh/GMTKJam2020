@@ -114,7 +114,6 @@ script = ExtResource( 1 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 4 )
 animation = "not_the_weight!"
-frame = 2
 playing = true
 
 [node name="BallShape" type="CollisionShape2D" parent="."]
